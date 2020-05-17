@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="建議用firefox閱讀">
+  <title>BIT</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">BIT</h1>
+  <p class="author">建議用firefox閱讀</p>
+  <p class="date">2020 未知</p>
+</section>
+
+<section>
+<section id="先來看看題目吧" class="title-slide slide level1">
+<h1>先來看看題目吧</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>給你一個長度為N的數列</p>
+<p>Q次詢問區間<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>,</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">{l,r}</annotation></semantics></math>總和 R次修改單點數值 N,Q,R&lt;1e5</p>
+</section>
+<section id="暴力查詢" class="slide level2">
+<h2>暴力查詢？</h2>
+<p>複雜度 O(QN+R)</p>
+<p>好像沒有很好</p>
+</section>
+<section id="前綴合之後暴力修改" class="slide level2">
+<h2>前綴合之後暴力修改？</h2>
+<p>複雜度O(Q+NR)</p>
+<p>並沒有比較好</p>
+</section>
+<section id="bit" class="slide level2">
+<h2>BIT!</h2>
+<p>可以作到O((Q+R)×logN)!</p>
+</section>
+</section>
+<section>
+<section id="binary-indexed-tree" class="title-slide slide level1">
+<h1>Binary Indexed Tree</h1>
+
+</section>
+<section id="結構" class="slide level2">
+<h2>結構</h2>
+<p>構造一個陣列</p>
+<p>每個點紀錄該點至他和2的冪次最大公因數之前的點</p>
+<p>ex.</p>
+<p>點6-&gt;gcd(6,2<sup>N</sup>)=2 -&gt;紀錄(6-2,6]=[5,6]</p>
+<p>點9-&gt;gcd(9,2<sup>N</sup>)=1 -&gt;紀錄(9-1,9]=[9,9]</p>
+<p>點12-&gt;gcd(12,2<sup>N</sup>)=4 -&gt;紀錄(12-4,12]=[9,12]</p>
+</section>
+<section id="圖例-維護範圍" class="slide level2">
+<h2>圖例-維護範圍</h2>
+<p>維護範圍</p>
+<p><img data-src="https://i.imgur.com/nL8VWMI.png" /></p>
+</section>
+<section id="圖例-維護數值" class="slide level2">
+<h2>圖例 維護數值</h2>
+<p>維護數值</p>
+<p><img data-src="https://i.imgur.com/RSZrln9.png" /></p>
+</section>
+</section>
+<section>
+<section id="查詢" class="title-slide slide level1">
+<h1>查詢</h1>
+
+</section>
+<section id="查詢區間19" class="slide level2">
+<h2>查詢區間[1,9]</h2>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Σ</mi><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>r</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">arr</annotation></semantics></math><sub>1-9</sub>=bit[8]+bit[9]</p>
+<p><img data-src="https://i.imgur.com/At49S28.png" /></p>
+</section>
+<section id="查詢區間39" class="slide level2">
+<h2>查詢區間[3,9]</h2>
+<p>[3,9]=[1,9]-[1,3]</p>
+<p>=bit[8]+bit[9]-(bit[2]+bit[3])</p>
+<p><img data-src="https://i.imgur.com/MVfViDW.png" /></p>
+</section>
+<section id="時間複雜度" class="slide level2">
+<h2>時間複雜度</h2>
+<p>O(logN)</p>
+</section>
+</section>
+<section>
+<section id="修改" class="title-slide slide level1">
+<h1>修改</h1>
+
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p>可發現其實更動點c</p>
+<p>只需要連帶修改&gt;c的c+(2的冪次)</p>
+<p><img data-src="https://i.imgur.com/s2rOy01.png" /></p>
+</section>
+<section id="時間複雜度-1" class="slide level2">
+<h2>時間複雜度</h2>
+<p>O(logN)</p>
+</section>
+</section>
+<section>
+<section id="code" class="title-slide slide level1">
+<h1>CODE</h1>
+
+</section>
+<section id="小技巧" class="slide level2">
+<h2>小技巧</h2>
+<p>利用位元運算可知道</p>
+<p>x&amp;(-x)會得到x+該數值可到達最近的維護位置</p>
+<p>#define lowbit(x) (x&amp;(-x))</p>
+</section>
+<section id="建立修改" class="slide level2">
+<h2>建立/修改</h2>
+<p>觀察後可知道建立第c位置時</p>
+<p>等價於在原本更新到c-1的bit中增加位置c的值</p>
+<p>因此從位置c開始一路修改到邊界即可</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">void</span> add(<span class="dt">int</span> c,<span class="dt">int</span> val){</span>
+<span id="cb1-2"><a href="#cb1-2"></a>    <span class="cf">for</span>(;c&lt;=N;c+=lowbit(c))</span>
+<span id="cb1-3"><a href="#cb1-3"></a>        bit[c]+=val;</span>
+<span id="cb1-4"><a href="#cb1-4"></a>}</span></code></pre></div>
+</section>
+<section id="查詢-1" class="slide level2">
+<h2>查詢</h2>
+<p>從點c一路往前查到2的冪次即可</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">int</span> qry(<span class="dt">int</span> c){</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="dt">int</span> ret=<span class="dv">0</span>;</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">for</span>(;c;c-=lowbit(c))</span>
+<span id="cb2-4"><a href="#cb2-4"></a>        ret+=bit[c];</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="cf">return</span> ret;</span>
+<span id="cb2-6"><a href="#cb2-6"></a>}</span></code></pre></div>
+</section>
+</section>
+<section>
+<section id="逆序數對" class="title-slide slide level1">
+<h1>逆序數對</h1>
+
+</section>
+<section id="給你一個數列" class="slide level2">
+<h2>給你一個數列</h2>
+<p>請找出有多少組 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>&gt;</mo><msub><mi>a</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">a_i&gt;a_j</annotation></semantics></math>且<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i&lt;j</annotation></semantics></math></p>
+<p>也就是說 求有多少組前面的比後面的數字小</p>
+</section>
+<section id="前情提要-離散化" class="slide level2">
+<h2>前情提要-離散化</h2>
+<p>給你一些數字</p>
+<p>請按照順序輸出他們的是第幾小的數字</p>
+</section>
+<section id="作法" class="slide level2">
+<h2>作法</h2>
+<ol type="1">
+<li>複製原本的陣列成陣列tmp</li>
+<li>先將tmp中重複的數字刪除</li>
+<li>將tmp按照大小排列</li>
+<li>可以知道第N大的數字會出現在tmp的第N項</li>
+<li>查詢原本的陣列每一項在tmp中的順序</li>
+</ol>
+</section>
+<section id="code-1" class="slide level2">
+<h2>CODE</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="pp">#define all</span>(a)<span class="pp"> </span>a.begin(),a.end()</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co">// vec是要排列陣列</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>vector&lt;<span class="dt">int</span>&gt; tmp=vec;</span>
+<span id="cb3-4"><a href="#cb3-4"></a>tmp.resize(tmp.unique(all(tmp))-tmp.begin);</span>
+<span id="cb3-5"><a href="#cb3-5"></a>sort(tmp.begin(),tmp.end());</span>
+<span id="cb3-6"><a href="#cb3-6"></a>rep(i,sz(vec))</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    vec[i]=lower_bound(all(tmp),vec[i])-tmp.begin();</span></code></pre></div>
+</section>
+<section id="逆序數對想法" class="slide level2">
+<h2>逆序數對想法</h2>
+<ol type="1">
+<li>先把所有數字離散化</li>
+<li>從數列後往前掃過</li>
+<li>同時開一個陣列K 紀錄離散化後的數字是否出現</li>
+<li>遇到每一個數字只需要查看在K中 該數字的位置之前的合數字</li>
+<li>可以BIT查詢數字!</li>
+</ol>
+</section>
+<section id="code-2" class="slide level2">
+<h2>CODE</h2>
+<p>關鍵程式碼</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="dt">int</span> ans=<span class="dv">0</span>;</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="cf">for</span>(<span class="dt">int</span> i=n-<span class="dv">1</span>;i&gt;=<span class="dv">0</span>;i--){</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    ans+=qry(vec[i]-<span class="dv">1</span>);</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="co">//-1是因為不能算到等於自己的數字</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>    add(vec[i]);</span>
+<span id="cb4-6"><a href="#cb4-6"></a>}</span>
+<span id="cb4-7"><a href="#cb4-7"></a>cout&lt;&lt;ans&lt;&lt;endl;</span></code></pre></div>
+</section>
+<section id="時間複雜度-2" class="slide level2">
+<h2>時間複雜度</h2>
+<p>離散化：O(NlogN)</p>
+<p>計算逆序數對：O(NlogN)</p>
+<p>(另有merge作法)</p>
+</section>
+</section>
+<section>
+<section id="題目qa" class="title-slide slide level1">
+<h1>題目QA</h1>
+
+</section>
+<section id="題目" class="slide level2">
+<h2>題目</h2>
+<ul>
+<li><p><a href="https://tioj.ck.tp.edu.tw/problems/1080">逆序數對</a></p></li>
+<li><p><a href="https://zerojudge.tw/ShowProblem?problemid=d788">ZJ-d788</a></p></li>
+<li><p><a href="https://codeforces.com/problemset/problem/61/E">CF-61E</a></p></li>
+</ul>
+</section>
+<section id="qa" class="slide level2">
+<h2>Q&amp;A</h2>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="oxolane">
+  <title>searching&amp;sort</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">searching&amp;sort</h1>
+  <p class="author">oxolane</p>
+  <p class="date">2020 未知</p>
+</section>
+
+<section>
+<section id="先來看看題目吧" class="title-slide slide level1">
+<h1>先來看看題目吧</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>給你一個遞增數列a[n]跟數字A</p>
+<p>找出A在第幾項</p>
+</section>
+</section>
+<section>
+<section id="從第一項往後找-直到找到他" class="title-slide slide level1">
+<h1>從第一項往後找 直到找到他</h1>
+
+</section>
+<section id="code" class="slide level2">
+<h2>CODE</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> arr[n];</span>
+<span id="cb1-2"><a href="#cb1-2"></a>rep(i,n){</span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="cf">if</span>(arr[i]==A)</span>
+<span id="cb1-4"><a href="#cb1-4"></a>        cout&lt;&lt;<span class="st">&quot;i&quot;</span>&lt;&lt;endl;<span class="co">//按照順序找到a</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>}</span></code></pre></div>
+</section>
+<section id="on" class="slide level2">
+<h2>O(N)</h2>
+</section>
+</section>
+<section id="section-1" class="title-slide slide level1">
+<h1><img data-src="https://i.imgur.com/WrcSigs.jpg" /></h1>
+
+</section>
+
+<section>
+<section id="二分搜" class="title-slide slide level1">
+<h1>二分搜?</h1>
+
+</section>
+<section id="作法" class="slide level2">
+<h2>作法</h2>
+<p>先查詢數列中間的值</p>
+<p>if &gt;A 答案在(中間,最後]</p>
+<p>否則 答案在[開始,中間)</p>
+<p>不斷做這動作</p>
+</section>
+<section id="code-1" class="slide level2">
+<h2>CODE</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">int</span> l=<span class="dv">0</span>,r=n;<span class="co">//下界是0,上界是最大</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co">//另外</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="cf">while</span>(l&lt;r-<span class="dv">1</span>){</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="dt">int</span> mid=(r+l)/<span class="dv">2</span>;<span class="co">//mid是中間</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="cf">if</span>(arr[mid]==A){<span class="co">//中間＝要找到的-&gt;輸出</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>        cout&lt;&lt;mid&lt;&lt;endl;</span>
+<span id="cb2-7"><a href="#cb2-7"></a>    }<span class="cf">else</span> <span class="cf">if</span>(arr[mid]&gt;A){</span>
+<span id="cb2-8"><a href="#cb2-8"></a>        r=mid;<span class="co">//中間的數字比較大 所以我們把上界改成中間</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>    }<span class="cf">else</span>{</span>
+<span id="cb2-10"><a href="#cb2-10"></a>        l=mid;<span class="co">//中間數字小 所以我們把下界提昇</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>    }</span>
+<span id="cb2-12"><a href="#cb2-12"></a>}</span></code></pre></div>
+</section>
+<section id="olog-n" class="slide level2">
+<h2>O(log N)</h2>
+</section>
+</section>
+<section>
+<section id="題目-qa" class="title-slide slide level1">
+<h1>題目 Q&amp;A</h1>
+
+</section>
+<section id="題目" class="slide level2">
+<h2>題目</h2>
+<p>有單調性的東西都可以二分搜</p>
+<p>若沒有順序性 通常會利用sort使數列單調</p>
+<ul>
+<li><p><a href="https://zerojudge.tw/ShowProblem?problemid=d732">ZJ-d732</a></p></li>
+<li><p><a href="https://zerojudge.tw/ShowProblem?problemid=c575">APCS-基地台</a></p></li>
+<li><p><a href="https://zerojudge.tw/ShowProblem?problemid=b966">ZJ-b966</a></p></li>
+<li><p><a href="https://zerojudge.tw/ShowProblem?problemid=c268">ZJ-c268</a></p></li>
+<li><p><a href="https://codeforces.com/contest/1260/problem/B">CF-1260B</a></p></li>
+</ul>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
