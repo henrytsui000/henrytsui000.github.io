@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="oxolane">
-  <title>BCC</title>
+  <title>字串</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -98,77 +98,30 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">BCC</h1>
+  <h1 class="title">字串</h1>
   <p class="author">oxolane</p>
   <p class="date">2020 未知</p>
 </section>
 
-<section>
-<section id="先來看看題目吧" class="title-slide slide level1">
-<h1>先來看看題目吧</h1>
-
+<section id="字" class="slide level1">
+<h1>字</h1>
+<h2 id="section"></h2>
+<p>文字分成字元和字串</p>
+<p>字元代表單一文字</p>
+<p>字串則是由多個字元所組成</p>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<p>給你一張圖</p>
-<p>問有多少點集 在拔掉任何一條邊後</p>
-<p>點內任兩點仍然相通</p>
+<section id="字串操作" class="slide level1">
+<h1>字串操作</h1>
+<p>儲存字串</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a>string str;</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="dt">char</span> ch[];</span>
+<span id="cb1-3"><a href="#cb1-3"></a>cin&gt;&gt;str&gt;&gt;ch;</span></code></pre></div>
 </section>
+<section id="kmp" class="slide level1">
+<h1>KMP</h1>
 </section>
-<section>
-<section id="bcc" class="title-slide slide level1">
-<h1>BCC</h1>
-
-</section>
-<section id="tarjan" class="slide level2">
-<h2>tarjan</h2>
-<p>把他轉成類似樹的結構</p>
-<p>定義low函數為往下走若干次後 往上跳一次</p>
-<p>最高能抵達的深度</p>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p>可以發現若low[u]&gt;=deep[u]</p>
-<p>則u以及他的子孫為BCC</p>
-</section>
-</section>
-<section>
-<section id="code" class="title-slide slide level1">
-<h1>CODE</h1>
-
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="at">const</span> <span class="dt">int</span> maxn = <span class="fl">1e5</span>+<span class="dv">5</span>;</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="dt">int</span> deep[maxn],low[maxn];</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="dt">void</span> dfs(<span class="dt">int</span> a,<span class="dt">int</span> pa){</span>
-<span id="cb1-4"><a href="#cb1-4"></a>    low[a]=deep[a]=deep[pa]+<span class="dv">1</span>;</span>
-<span id="cb1-5"><a href="#cb1-5"></a>    <span class="cf">for</span>(<span class="dt">int</span> x:edge[a])<span class="cf">if</span>(x!=pa){</span>
-<span id="cb1-6"><a href="#cb1-6"></a>        <span class="cf">if</span>(low[x])</span>
-<span id="cb1-7"><a href="#cb1-7"></a>            low[a]=min(deep[x],low[a]);</span>
-<span id="cb1-8"><a href="#cb1-8"></a>        <span class="cf">else</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>            dfs(x,a);</span>
-<span id="cb1-10"><a href="#cb1-10"></a>        low[pa]=min(low[a],low[pa]);</span>
-<span id="cb1-11"><a href="#cb1-11"></a>    } </span>
-<span id="cb1-12"><a href="#cb1-12"></a>    <span class="cf">if</span>(low[a]&gt;=deep[pa]&amp;&amp;a!=<span class="dv">0</span>)</span>
-<span id="cb1-13"><a href="#cb1-13"></a>        cout&lt;&lt;<span class="st">&quot;find:&quot;</span>&lt;&lt;pa&lt;&lt;<span class="ch">&#39; &#39;</span>&lt;&lt;a&lt;&lt;endl;</span>
-<span id="cb1-14"><a href="#cb1-14"></a>}</span></code></pre></div>
-</section>
-</section>
-<section>
-<section id="題目-qa" class="title-slide slide level1">
-<h1>題目 Q&amp;A</h1>
-
-</section>
-<section id="題目" class="slide level2">
-<h2>題目</h2>
-<ul>
-<li><a href="https://zerojudge.tw/ShowProblem?problemid=e720">ZJ-e270</a></li>
-</ul>
-</section>
-<section id="qa" class="slide level2">
-<h2>Q&amp;A</h2>
-</section>
+<section id="z-value" class="slide level1">
+<h1>Z-value</h1>
 </section>
     </div>
   </div>
