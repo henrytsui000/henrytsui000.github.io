@@ -15,3 +15,7 @@
 "ICLR":
   color: "#5bb825"
   url: https://iclr.cc/About
+
+"arXiv":
+  color: "#b31b1b"
+  url: https://arxiv.org/
