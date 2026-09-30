@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://henrytsui000.github.io/mypage/sitemap.xml
+Sitemap: https://henrytsui000.github.io/sitemap.xml
