@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My paper [Σ StaDy4D](https://sigma4reconstruct.github.io/) received the **Best Paper Award** at the CVPR 2026 **GenRecon3D** Workshop (non-archival)! :crown: :tada:
+My paper [Σ StaDy4D](https://sigma4reconstruct.github.io/) received the **Best Paper Award** at the CVPR 2026 **GenRecon3D** Workshop! :crown: :tada:
